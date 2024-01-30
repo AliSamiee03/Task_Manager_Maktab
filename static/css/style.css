@@ -3,6 +3,11 @@
     src: url("/static/fonts/Loki-Regular.otf");
 }
 
+@font-face {
+    font-family: "Crimsonn";
+    src: url("static/fonts/CrimsonText-italic.ttf")
+}
+
 * {
     font-family: Loki;
 }
@@ -76,6 +81,7 @@ footer {
 .footer {
     display: flex;
 }
+
   
 .footer-item {
     flex: 1;
@@ -109,4 +115,8 @@ footer {
     padding-top: 0.40%;
     background-color: rgb(59, 59, 59);
     border-radius: 20%;
+}
+
+.follow-us-footer {
+    font-family: Crimsonn;
 }
