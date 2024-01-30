@@ -20,7 +20,6 @@ from .views import show_home_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('account/', include('Accounts.urls')),
-    # path('tasks/', include('Tasks.urls')),
-    path('', show_home_page)
+    path('', show_home_page, name='Home'),
+
 ]

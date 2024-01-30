@@ -1,3 +1,112 @@
-#body {
-    background-image: url('/static/images/background_base.jpg');
+@font-face {
+    font-family: "Loki";
+    src: url("/static/fonts/Loki-Regular.otf");
+}
+
+* {
+    font-family: Loki;
+}
+
+
+body {
+    background-image: url(../images/image_base.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+}
+
+.glass-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.glass-navbar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.glass-navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.glass-navbar a:hover {
+    color: #00bcd4;
+}
+
+#a-navbar {
+    color : green;
+    font-weight: 800;
+}
+
+.login-logout-button {
+    margin-right:5%;
+    margin-top: 2%;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.5); /* پس‌زمینه شفاف با رنگ سفید */
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* افزودن سایه */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 190px;
+}
+
+.footer-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+}
+  
+.footer-item {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.footer-icon {
+    margin: 5%;
+}
+
+.container-2 {
+    display: flex;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; 
+}
+
+.instagram-github-icon {
+    margin-top:0.5%;
+    padding-top: 0.40%;
+    background-color: rgb(59, 59, 59);
+    border-radius: 20%;
+}
+
+.instagram-github-icon {
+    margin-top:0.5%;
+    padding-top: 0.40%;
+    background-color: rgb(59, 59, 59);
+    border-radius: 20%;
 }
