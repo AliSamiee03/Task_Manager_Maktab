@@ -1,31 +1,31 @@
-from django.contrib.auth.forms import AuthenticationForm
+from django import forms
 from django.contrib.auth import get_user_model
 
 
-class LoginForm(AuthenticationForm):
+class LoginForm(forms.ModelForm):
     
     class Meta:
         model = get_user_model()
-        fields = '__all__'
+        fields = ['username', 'password']
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({
-            'type': 'text',
-            'class': 'form-control fw-custom',
-            'id': 'username',
-            'name': 'username',
-            'placeholder': "Enter Username",
-            'required': True,
-            "autocomplete": "off",
-        })
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['username'].widget.attrs.update({
+    #         'type': 'text',
+    #         'class': 'form-control fw-custom',
+    #         'id': 'username',
+    #         'name': 'username',
+    #         'placeholder': "Enter Username",
+    #         'required': True,
+    #         "autocomplete": "off",
+    #     })
 
-        self.fields['password'].widget.attrs.update({
-            'type': 'password',
-            'class': 'form-control fw-custom',
-            'id': 'password',
-            'name': 'password',
-            'placeholder': "Enter Password",
-            'required': True,
-            "autocomplete": "off",
-        })
+    #     self.fields['password'].widget.attrs.update({
+    #         'type': 'password',
+    #         'class': 'form-control fw-custom',
+    #         'id': 'password',
+    #         'name': 'password',
+    #         'placeholder': "Enter Password",
+    #         'required': True,
+    #         "autocomplete": "off",
+    #     })
