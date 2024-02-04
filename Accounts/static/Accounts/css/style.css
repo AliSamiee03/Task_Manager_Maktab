@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Crimsonn";
-    src: url("/static/Accounts/fonts/CrimsonText-italic.ttf");
-}
-
-* {
-    font-family: Crimsonn;
+.login-form {
+    background-color: aliceblue;
 }

@@ -1,0 +1,36 @@
+{% if messages %}
+    {% for msg in messages %}
+        {% if msg.tags == 'success info' %}
+            <script>
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Signed in successfully"
+                });
+            </script>
+        {% endif %}
+
+        {% if msg.tags == 'error error' %}
+            <script>
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            </script>
+        {% endif %}
+        
+    {% endfor %}
+{% endif %}
