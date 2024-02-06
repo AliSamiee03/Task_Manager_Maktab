@@ -1,11 +1,36 @@
 {% extends "Base.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block header %}
+
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+
+{% endblock %}
+
 
 {% block content%}
-
-    <div class="out-div-hower">
-        <div class="in-div-hower">
-            <h3 class="hover-2">With sam task, you can reach all your tasks</h3>
+    {% if user.is_authenticated %}
+        <div class="home out-div-hower">
+            <div class="in-div-hower">
+                <a href="#"> All Tasks </a>
+                <a href="#"> Categories </a>
+                <a href="#"> Tags </a>
+            </div>
         </div>
-    </div>
+
+        <div class="text-bottom">
+            {% include 'text_bottom-home.html' %}
+        </div>
+
+        
+    {% else %}
+        <div class="out-div-hower">
+            <div class="in-div-hower2">
+                <h3 class="hover-2">With sam task, you can reach all your tasks</h3>
+            </div>
+        </div>
+    {% endif %}
     
 {% endblock %}

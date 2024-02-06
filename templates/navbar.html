@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar glass-navbar">
+    <div class="container-fluid">
+        <a id= "a-navbar" class="navbar-brand">SAM Task</a>
+        <div class="d-flex justify-content-end">
+            {% if user.is_authenticated %}
+                <a class="login-logout-button" href="{% url "logout" %}">Logout</a>
+                <a href="#" style="margin-right: 2%;">
+                    <img src="{% static "images/Profile_icon.png" %}" alt="Profile icon"  class="rounded-circle" width="37">
+                </a>
+            {% else %}
+                <a class="login-logout-button" href="{% url "login" %}">Login/SignUp</a>
+            {% endif %}
+            <form class="search-form d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

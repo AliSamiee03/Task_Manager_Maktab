@@ -13,11 +13,11 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background: rgb(233, 247, 248);
 }
 
 .glass-navbar {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(174, 224, 218, 0.2);
     backdrop-filter: blur(10px);
     padding: 20px;
     text-align: center;
@@ -36,17 +36,17 @@ body {
 
 .glass-navbar a {
     text-decoration: none;
-    color: #fff;
+    color: #0b7ce6;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
 .glass-navbar a:hover {
-    color: #00bcd4;
+    color: #03579c;
 }
 
 #a-navbar {
-    color : green;
+    color : rgb(9, 71, 243);
     font-weight: 800;
 }
 
@@ -55,8 +55,8 @@ body {
     margin-top: 2%;
 }
 
-footer {
-    background: rgba(255, 255, 255, 0.5); /* پس‌زمینه شفاف با رنگ سفید */
+.footer-base {
+    background: rgba(144, 187, 228, 0.5); /* پس‌زمینه شفاف با رنگ سفید */
     box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* افزودن سایه */
     text-align: center;
     padding: 10px;
@@ -78,7 +78,7 @@ footer {
   
 .footer-item {
     flex: 1;
-    border: 1px solid #ccc;
+    border: 1px solid #cbd8db;
     padding: 10px;
 }
 
@@ -116,10 +116,10 @@ footer {
 
 
   
-  .hover-2 {
-    --c: #1095c1; /* the color */
-    --b: .1em;    /* border length*/
-    --d: 20px;    /* the cube depth */
+.hover-2 {
+    --c: #1095c1; 
+    --b: .1em;    
+    --d: 20px;    
     
     --_s: calc(var(--d) + var(--b));
     font-size: xx-large;
@@ -142,8 +142,8 @@ footer {
        var(--d) calc(100% - var(--d))
       );
     transition: 0.5s;
-  }
-  .hover-2:hover {
+}
+.hover-2:hover {
     transform: translate(0,0);
     clip-path: 
       polygon(
@@ -154,7 +154,7 @@ footer {
        calc(100% - var(--d)) 100%, 
        0% 100%
      );
-  }
+}
   
 .out-div-hower {
     display: flex;
@@ -165,4 +165,10 @@ footer {
 
 .in-div-hower {
     text-align: center;
+    width: 75%;
+}
+
+.in-div-hower2 {
+    text-align: center;
+    width: 43%;
 }
