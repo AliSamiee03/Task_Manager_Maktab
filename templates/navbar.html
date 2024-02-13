@@ -2,7 +2,7 @@
 
 <nav class="navbar glass-navbar">
     <div class="container-fluid">
-        <a id= "a-navbar" class="navbar-brand">SAM Task</a>
+        <a id= "a-navbar" href="{% url "Home" %}" class="navbar-brand">SAM Task</a>
         <div class="d-flex justify-content-end">
             {% if user.is_authenticated %}
                 <a class="login-logout-button" href="{% url "logout" %}">Logout</a>
