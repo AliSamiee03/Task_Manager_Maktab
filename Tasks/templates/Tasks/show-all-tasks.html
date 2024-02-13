@@ -19,6 +19,12 @@
                         <h2 class="card-title">{{ task.title}}</h2>
                         <p class="date">{{ task.due_date }}</p>
                         <p class="description"></p>
+                        {% if task.done == "C" %}
+                            <p> Completed </p>
+                        {% else %}
+                            <p> Incomplete </p>
+                        {% endif %}
+                        <br/>
                         <div class='link-see-more'>
                             <p>See <a href="{% url "detail" task.id %}">More</a>.</p>
                         </div>

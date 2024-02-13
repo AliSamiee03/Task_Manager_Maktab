@@ -1,0 +1,11 @@
+<div class="checkboxes">
+  <form  action="{% url "complete" task.id %}" method="post">
+    {% csrf_token %}
+    {% if task.done == "I" %}
+        <button class="btn btn--stripe">Complete</button>
+    {% else %}
+        <button class="btn btn--stripe">InComplete</button>
+    {% endif %}
+
+  </form>
+</div>

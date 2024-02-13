@@ -16,7 +16,7 @@
     <h1>look at<br>this go!</h1>
     <div class="book-center">
         <div class="book">
-            <div class="back"> my task </div>
+            <div class="back">  </div>
             <div class="page6"> 
                 <p class="title"> Title :</p>
                 <p class="detail">  {{ task.title }} </p>
@@ -24,6 +24,10 @@
                 <p class="detail"> {{ task.due_date }} </p>
                 <p class="title"> Creator : </p>
                 <p class="detail"> {{ task.creator }} </p>
+                <p class="title"> Done : </p>
+                <p class="done"> 
+                    {% include "Tasks/checkbox.html" %}
+                </p>
             </div>
             <div class="page5"></div>
             <div class="page4"></div>
