@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 def all_tasks_view(request):
     tasks = Task.objects.filter(creator = request.user)
     content = {'tasks': tasks}
-    print(content)
     return render(request, 'Tasks/show-all-tasks.html', content)
 
 @login_required
@@ -27,3 +26,15 @@ def task_complete_view(request, task_id):
         task.done = "I"
     task.save()
     return redirect('all')
+
+@login_required
+def show_categories_view(request):
+    categories = Category.objects.filter()
+    context = {'categories': categories}
+    return render(request, 'Tasks/show-categories.html', context)
+
+
+def show_categories_tasks_view(request, category_id):
+    tasks = Task.objects.filter(creator = request.user, category__id = category_id)
+    context = {'tasks': tasks}
+    return render(request, 'Tasks/show-all-tasks.html', context)

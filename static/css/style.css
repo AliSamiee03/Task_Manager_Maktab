@@ -64,6 +64,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 160px;
+    
 }
 
 .footer-title {
@@ -171,4 +172,9 @@ body {
 .in-div-hower2 {
     text-align: center;
     width: 43%;
+}
+
+
+.content-base {
+    margin: auto;
 }
