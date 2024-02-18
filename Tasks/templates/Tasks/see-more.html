@@ -26,7 +26,7 @@
                 <p class="detail"> {{ task.creator }} </p>
                 <p class="title"> Done : </p>
                 <p class="done"> 
-                    {% include "Tasks/checkbox.html" %}
+                    {% include 'Tasks/checkbox.html' %}
                 </p>
             </div>
             <div class="page5"></div>
@@ -34,7 +34,12 @@
             <div class="page3"></div>
             <div class="page2"></div>
             <div class="page1"></div>
-            <div class="front"></div>
+            <div class="front">
+                {% for tag in tags%}
+                    <p style="color: white;"> #{{tag}} </p>
+                {% endfor %}
+                <p style="color: white;"> Category : {{ category }}</p>
+            </div>
         </div>
     </div>
 </body>

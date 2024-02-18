@@ -22,7 +22,7 @@
                     <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
                         <div class="content">
                             <h6 class="category">{{ category.name }}</h6>
-                            <h4 class="title"><a href="#">See Tasks</a></h4>
+                            <h4 class="title"><a href="{% url "category-task" category.id %}">See Tasks</a></h4>
                             <p class="description"> {{ category.description }} </p>
                         </div>
                     </div> <!-- end card -->
